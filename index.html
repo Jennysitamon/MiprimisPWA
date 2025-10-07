@@ -16,6 +16,14 @@
     <h1>Bienvenido a mi PWAA</h1>
     <p>Se puede instalar como aplicación en tu celu</p>
     <button onclick="alert('Hola desde mi PWA')">Click aquí</button>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker
+            .register("/repo/sw.js")
+            .then(() => console.log("Service worker registrado"))
+            .catch(err => console.log("Error al registrar el SW", err));
+        }
+    </script>
     
 </body>
 </html>
