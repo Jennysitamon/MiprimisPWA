@@ -4,7 +4,9 @@
 const CACHE_NAME = "mi-cahche-1";
 const urlsToCache = [
     "index.html",
-    "offline.html"
+    "offline.html",
+    "icon-192x192.png",
+    "icon-512x512.png"
 ];
 
 //2.Install -> se ejecuta al instalat el SW
