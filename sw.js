@@ -1,7 +1,7 @@
 //Estructura básica de un servicio worker
 
 //1. Nombre del caché y archivos a cachear
-const CACHE_NAME = "mi-cahche-1";
+const CACHE_NAME = "mi-cache-1";
 const urlsToCache = [
     "index.html",
     "offline.html",

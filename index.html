@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi primis PWA</title>
 
     <!-- Vincular el manifest -->
-     <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Definir color de la barra de navegació de móviles,TAREA BUSCAR ICONOS AGREGAR ICONOS  -->
-     <meta name="theme-color" content="#800080">
+    <meta name="theme-color" content="#800080">
 
 </head>
+
 <body>
     <h1>Bienvenido a mi PWAA</h1>
     <p>Se puede instalar como aplicación en tu celu</p>
@@ -19,11 +21,12 @@
     <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker
-            .register("/repo/sw.js")
-            .then(() => console.log("Service worker registrado"))
-            .catch(err => console.log("Error al registrar el SW", err));
+                .register("sw.js")
+                .then(() => console.log("Service worker registrado"))
+                .catch(err => console.log("Error al registrar el Servicioworker", err));
         }
     </script>
-    
+
 </body>
+
 </html>
