@@ -3,21 +3,23 @@
 //1. Nombre del caché y archivos a cachear
 const CACHE_NAME = "mi-cache-1";
 const urlsToCache = [
-    "index.html",
-    "offline.html",
-    "icon-72x72.png",
-    "icon-96x96.png",
-    "icon-192x192.png",
-    "icon-256x256.png",
-    "icon-512x512.png"
-
+  "index.html",
+  "offline.html",
+  "icons/icon-72x72.png",
+  "icons/icon-96x96.png",
+  "icons/icon-192x192.png",
+  "icons/icon-256x256.png",
+  "icons/icon-512x512.png"
 ];
 
 //2.Install -> se ejecuta al instalat el SW
 self.addEventListener("install", event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME).then(cache=> cache.addAll(urlsToCache))
-    );
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      console.log("Archivos cacheaados correctamente");
+      return cache.addAll(urlsToCache);
+    })
+  );
 });
 
 //3. activate -> se ejecuta al activarme (limpia caches viejas)
